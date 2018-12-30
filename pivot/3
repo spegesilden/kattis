@@ -1,0 +1,17 @@
+n = int(input())
+line = input().split()
+l = []
+pivots = []
+
+for i in range(n):
+    l.append(int(line[i]))
+
+index = n - 1
+result = 1
+
+for i in range(n-1):
+    j = n - i - 1
+    if l[j] < l[j - 1]:
+        result += 1
+
+print(result)
